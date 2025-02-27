@@ -1,0 +1,1 @@
+# Automated-Pneumonia-Detection-from-X-Ray-images-Using-Deep-Learning-SACET
