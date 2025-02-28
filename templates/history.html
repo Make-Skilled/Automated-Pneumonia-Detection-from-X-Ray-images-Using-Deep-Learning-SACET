@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 to-purple-500 min-h-screen flex items-center justify-center p-8">
+    <div class="max-w-5xl w-full bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-gray-200">
+        <h2 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">Your Scan History</h2>
+
+        {% if history %}
+        <div class="overflow-x-auto">
+            <table class="w-full border border-gray-300 rounded-lg shadow-lg overflow-hidden">
+                <thead>
+                    <tr class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-lg">
+                        <th class="border border-gray-300 p-4">Image</th>
+                        <th class="border border-gray-300 p-4">Prediction</th>
+                        <th class="border border-gray-300 p-4">Date & Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for scan in history %}
+                    <tr class="bg-gray-50 hover:bg-gray-200 transition duration-300 text-center">
+                        <td class="border border-gray-300 p-4">
+                            <img src="{{ scan[0] }}" 
+                                alt="Scanned Image" 
+                                class="w-24 h-24 mx-auto rounded-lg border-2 border-gray-300 shadow-md">
+                        </td>
+                        <td class="border border-gray-300 p-4 font-semibold text-gray-700">
+                            <span class="px-3 py-1 rounded-full text-white text-sm 
+                                {% if 'severity' in scan[1] %} bg-red-500 
+                                {% elif 'Mild' in scan[1] %} bg-yellow-500 
+                                {% else %} bg-green-500 {% endif %}">
+                                {{ scan[1] }}
+                            </span>
+                        </td>
+                        <td class="border border-gray-300 p-4 text-gray-600">{{ scan[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-gray-700 text-center text-lg mt-6">No scan history available.</p>
+        {% endif %}
+
+        <div class="text-center mt-6">
+            <a href="{{ url_for('dashboard') }}" 
+                class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg 
+                shadow-lg hover:from-indigo-700 hover:to-blue-700 transition duration-300">
+                Back to Dashboard
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
