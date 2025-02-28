@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Treatment</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+        }
+
+        .text-blue-700 {
+            color: #2980b9;
+        }
+
+        .bg-blue-50 {
+            background: #ffffff;
+        }
+
+        .bg-blue-100 {
+            background: #ffffff;
+        }
+
+        .bg-red-500 {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 to-blue-500 text-gray-900 font-sans">
+    <div class="max-w-screen-xl mx-auto p-8">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-blue-700 to-blue-500 p-6 rounded-2xl shadow-xl mb-8">
+            <h2 class="text-white text-4xl font-extrabold">Pneumonia Treatment</h2>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex gap-6">
+                    <li><a href="{{ url_for('dashboard') }}" class="text-white text-lg font-semibold hover:text-blue-200 transition">Dashboard</a></li>
+                    <li><a href="{{ url_for('food_recommendation') }}" class="text-white text-lg font-semibold hover:text-blue-200 transition">Food Recommends</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="text-white text-lg font-semibold px-6 py-3 bg-red-500 hover:bg-red-700 text-white rounded-lg text-lg">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section class="bg-white p-8 rounded-2xl shadow-2xl mb-8">
+            <h3 class="text-3xl text-blue-700 font-bold mb-4">Understanding Pneumonia Treatment</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                Pneumonia is a serious lung infection that requires prompt medical attention. Early treatment can significantly reduce the risk of complications and promote recovery. This page outlines the treatment process, medications, and home care tips to help you manage pneumonia effectively.
+            </p>
+
+            <!-- Treatment Process -->
+            <h3 class="text-3xl text-blue-700 font-bold mb-6">Treatment Process Flow</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h4 class="text-2xl font-semibold text-blue-500 mb-3">Step 1: Diagnosis</h4>
+                    <p class="text-gray-700">A healthcare provider will conduct physical exams, listen to your lungs, and may use imaging tests (like an X-ray) to confirm the condition.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h4 class="text-2xl font-semibold text-blue-500 mb-3">Step 2: Medication</h4>
+                    <p class="text-gray-700">Based on the type of pneumonia, antibiotics or antiviral medications will be prescribed. Follow the full course as directed.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h4 class="text-2xl font-semibold text-blue-500 mb-3">Step 3: Hospitalization (if needed)</h4>
+                    <p class="text-gray-700">Severe cases may require hospitalization for oxygen therapy, IV fluids, and other necessary treatments.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h4 class="text-2xl font-semibold text-blue-500 mb-3">Step 4: Recovery</h4>
+                    <p class="text-gray-700">Rest, hydration, and proper medication adherence are essential for recovery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Care Tips -->
+        <section class="bg-blue-100 p-8 rounded-2xl shadow-xl mb-8">
+            <h4 class="text-3xl text-blue-700 font-bold mb-4">Home Care Tips</h4>
+            <ul class="list-disc pl-6 text-lg text-gray-800 space-y-3">
+                <li>Drink plenty of fluids to help loosen mucus.</li>
+                <li>Get sufficient rest and avoid exertion.</li>
+                <li>Take medications as prescribed and complete the full course.</li>
+                <li>Use a humidifier to keep the air moist and ease breathing.</li>
+                <li>Monitor your temperature and seek medical help if needed.</li>
+                <li>Eat a balanced diet to support your immune system.</li>
+            </ul>
+        </section>
+
+        <!-- Emergency Section -->
+        <section class="bg-red-500 text-white p-8 rounded-2xl shadow-xl text-center mb-8">
+            <h4 class="text-3xl font-bold mb-4">Need Immediate Medical Help?</h4>
+            <p class="text-lg">If you experience severe symptoms or difficulty breathing, contact a healthcare provider immediately.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-white text-lg py-6 mt-10 bg-blue-900 rounded-2xl shadow-lg">
+            <p>&copy; 2025 Pneumonia Detection. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

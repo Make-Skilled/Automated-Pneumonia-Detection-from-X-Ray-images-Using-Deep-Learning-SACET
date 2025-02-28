@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Food Recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+        }
+
+        .text-blue-700 {
+            color: #2980b9;
+        }
+
+        .bg-blue-50 {
+            background: #ffffff;
+        }
+
+        .bg-blue-100 {
+            background: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 to-blue-500 text-gray-900 font-sans">
+    <div class="max-w-screen-xl mx-auto p-8">
+        <header class="flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-blue-700 to-blue-500 p-6 rounded-2xl shadow-xl mb-8">
+            <h2 class="text-white text-3xl font-bold">Pneumonia Food Recommendations</h2>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex gap-6">
+                    <li><a href="{{ url_for('dashboard') }}" class="text-white text-lg font-medium hover:text-blue-200 transition">Dashboard</a></li>
+                    <li><a href="{{ url_for('treatment') }}" class="text-white text-lg font-medium hover:text-blue-200 transition">Treatment Info</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="text-white text-lg font-medium px-6 py-3 bg-red-500 hover:bg-red-700 text-white rounded-lg text-lg">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="bg-white p-8 rounded-2xl shadow-xl mb-8">
+            <h3 class="text-2xl text-blue-700 font-bold mb-4">Why Nutrition Matters?</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Proper nutrition plays a crucial role in recovering from pneumonia. The right foods can help strengthen the immune system, reduce inflammation, and support lung function. When fighting an infection, your body requires more energy and nutrients to heal properly.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Staying hydrated, eating nutrient-dense foods, and avoiding inflammatory foods can accelerate recovery. A well-balanced diet provides essential vitamins, minerals, and proteins necessary for lung health and overall well-being.
+            </p>
+        </section>
+
+        <section class="bg-blue-50 p-8 rounded-2xl shadow-xl mb-8">
+            <h3 class="text-2xl text-blue-700 font-bold mb-4">✅ Best Foods for Pneumonia Recovery</h3>
+            <p class="text-gray-700 text-lg mb-4">
+                These nutrient-rich foods help boost immunity, reduce inflammation, and provide the necessary energy for recovery.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-lg shadow-md">🍊 <strong>Citrus Fruits</strong> – Rich in Vitamin C to enhance immunity and reduce inflammation.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">🥦 <strong>Leafy Greens</strong> – High in antioxidants that help fight infections and improve oxygen circulation.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">🧄 <strong>Garlic</strong> – Contains natural antimicrobial properties that help combat respiratory infections.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">🍵 <strong>Ginger & Turmeric</strong> – Reduce lung inflammation and aid in clearing mucus from the airways.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">🐟 <strong>Lean Protein</strong> – Supports tissue repair and strengthens respiratory muscles.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">🍚 <strong>Whole Grains</strong> – Provide sustained energy and fiber to maintain digestive health.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">💧 <strong>Herbal Teas</strong> – Help soothe the throat and keep the respiratory system hydrated.</div>
+                <div class="bg-white p-5 rounded-lg shadow-md">🥜 <strong>Nuts & Seeds</strong> – Contain healthy fats and vitamin E, which support lung function.</div>
+            </div>
+        </section>
+
+        <section class="bg-blue-100 p-8 rounded-2xl shadow-xl mb-8">
+            <h3 class="text-2xl text-blue-700 font-bold mb-4">❌ Foods to Avoid</h3>
+            <p class="text-gray-700 text-lg mb-4">
+                Certain foods can worsen inflammation, suppress the immune system, or increase mucus production, making recovery from pneumonia more difficult.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-red-100 p-5 rounded-lg shadow-md">🍩 <strong>Sugary Foods</strong> – Excess sugar weakens immune response and increases inflammation.</div>
+                <div class="bg-red-100 p-5 rounded-lg shadow-md">🥛 <strong>Dairy Products</strong> – Can thicken mucus and make breathing more difficult.</div>
+                <div class="bg-red-100 p-5 rounded-lg shadow-md">🍟 <strong>Fried & Processed Foods</strong> – High in unhealthy fats that contribute to inflammation.</div>
+                <div class="bg-red-100 p-5 rounded-lg shadow-md">☕ <strong>Caffeine & Alcohol</strong> – Lead to dehydration, which can worsen symptoms.</div>
+                <div class="bg-red-100 p-5 rounded-lg shadow-md">🍕 <strong>Fast Food</strong> – Lacks essential nutrients needed for recovery and contains excess sodium.</div>
+                <div class="bg-red-100 p-5 rounded-lg shadow-md">🥤 <strong>Carbonated Beverages</strong> – Can cause bloating and discomfort, making breathing harder.</div>
+            </div>
+        </section>
+
+        <footer class="text-center text-white text-lg py-6 mt-10 bg-blue-900 rounded-2xl shadow-lg">
+            <p>&copy; 2025 Pneumonia Recovery. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
